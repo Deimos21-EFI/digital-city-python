@@ -18,7 +18,7 @@
 
 ######################################################
 
-DEBUG = False
+DEBUG = True
 
 def debug(msg):
     if DEBUG:print(f"[INFO]: {msg}")
@@ -31,8 +31,9 @@ def getOperator():
     operationValide = False
     while not operationValide:
         operation = input("Entrez une opération (+, -, *, /) : ")
-        operationValide = (operation == "=" or operation == "+" or operation == "-" or operation == "*" or operation == "/")
-        operationValide = "+-*/".find(operation)
+        #operationValide = (operation == "=" or operation == "+" or operation == "-" or operation == "*" or operation == "/")
+        operationValide = ("+-*/=".find(operation) >=0)
+        if operationValide == False: print("[ERROR] Invalid operator")
     else:
         return operation
 
@@ -58,56 +59,51 @@ print("ℹ️ Instruction:")
 print("▫️Entrez un nombre et puis une opération, le calcul est affiché au fur et à mesure")
 print("▫️Entrez = pour terminer le calcul")
 print("------------")
-
+#
+# Initialisation
+#
 strResultat=""
-resultat = 0
-finDeCalcul = False
+intResultat = 0
 operator = ""
-debut = True
-oldResultat = 0
+finDeCalcul = False
+
 nombre = getNombre()
+
 while not finDeCalcul:
     debug(f"Nombre saisi : {nombre}")
-    if (strResultat == ""):
-        # cas: pas encore de calcul
-        resultat = nombre
-    else:
-        oldResultat = resultat
-        # cas: déjà un calcul effectué
-        if (operator == "="):
-            debug(f"Résultat: {resultat}")
-            finDeCalcul = True
-        elif (operator == "+"):
-            debug(f"+ Addition de {nombre} à {resultat}")
-            resultat += nombre
-        elif (operator == "-"):
-            debug(f"+ Soustraction de {nombre} à {resultat}")
-            resultat -= nombre
-        elif (operator == "*"):
-            debug(f"+ Multiplication de {resultat} par {nombre} ")
-            resultat *= nombre
-        elif (operator == "/"):
-            debug(f"+ Division de {resultat} par {nombre} ")
-            resultat /= nombre
-    #
-    # Afficher le résultat intermédiaire
-    #
-    if (strResultat == ""):
-        strResultat = f"{nombre}"
-    else:
-        strResultat += operator + f"{nombre}"
-    print(f"🧮 {strResultat}")
-    #
-    # Lire le nombre suivant
-    #
     operator = getOperator()
     if (operator == "="):
         finDeCalcul = True
     else:
+        # cas: déjà un calcul effectué
+        match operator:
+            case "+":
+                debug(f"+ Addition de {nombre} à {intResultat}")
+                intResultat += nombre
+            case "-":
+                debug(f"+ Soustraction de {nombre} à {intResultat}")
+                intResultat -= nombre
+            case "*":
+                debug(f"+ Multiplication de {intResultat} par {nombre} ")
+                intResultat *= nombre
+            case "/":
+                debug(f"+ Division de {intResultat} par {nombre}")
+                intResultat /= nombre
+        #
+        # Afficher le résultat intermédiaire
+        #
+        if (strResultat == ""):
+            strResultat = f"{nombre}"
+        else:
+            strResultat += operator + f"{nombre}"
+        print(f"🧮 {strResultat}")
+        #
+        # Lire le nombre suivant
+        #
         nombre = getNombre()
-    debug("-------")
+        debug("-------")
 else:
     # afficher le résultat final
-    print(f"🟰 {strResultat} = {resultat}")
+    print(f"🟰 {strResultat} = {intResultat}")
     print(f"{3+4}")
 ######################################################
