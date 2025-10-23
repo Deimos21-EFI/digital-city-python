@@ -31,3 +31,6 @@ except Exception as e:
 finally:
     response = 0
 
+# ref
+# https://exercism.org/
+# https://www.pythontutorial.net/tkinter/
