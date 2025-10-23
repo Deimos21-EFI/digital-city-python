@@ -1,0 +1,18 @@
+{'id': '100', 'titre': '2', 'auteurs': '3', 'isbn': '4', 'editeur': '85'}
+{'id': '200', 'titre': 'Titre 2', 'auteurs': 'Auteur 2', 'isbn': '978-2-01-310859-0', 'editeur': 'Dupuis'}
+{'id': '300', 'titre': 'Titre 3', 'auteurs': 'Auteur 3', 'isbn': '978-2-01-310860-0', 'editeur': 'Casterman'}
+{'id': '101', 'titre': "Le Python c'est extra", 'auteurs': 'Serpentine', 'isbn': '978-2-01-310861-0', 'editeur': 'MagicBook'}
+{'id': '25', 'titre': 'TTTiotre', 'auteurs': 'zorglub', 'isbn': '978-2-01-310862-0', 'editeur': 'Spirou'}
+{'id': '125', 'titre': '1', 'auteurs': '1', 'isbn': '1', 'editeur': '1'}
+{'id': '18', 'titre': 'a', 'auteurs': 'z', 'isbn': 'e', 'editeur': 'tr'}
+{'id': '37', 'titre': 'Titre 37', 'auteurs': '', 'isbn': '', 'editeur': ''}
+{'id': '1', 'titre': 'Le Petit Prince', 'auteurs': 'Antoine de Saint-Exupéry', 'isbn': '978-2-07-061275-8', 'editeur': 'Gallimard'}
+{'id': '2', 'titre': '1984', 'auteurs': 'George Orwell', 'isbn': '978-2-07-036822-8', 'editeur': 'Gallimard'}
+{'id': '3', 'titre': "L\'Étranger", 'auteurs': 'Albert Camus', 'isbn': '978-2-07-036002-4', 'editeur': 'Gallimard'}
+{'id': '4', 'titre': 'Harry Potter à l´école des sorciers', 'auteurs': 'J.K. Rowling', 'isbn': '978-2-07-054120-1', 'editeur': 'Gallimard'}
+{'id': '5', 'titre': 'Le Seigneur des Anneaux', 'auteurs': 'J.R.R. Tolkien', 'isbn': '978-2-266-15410-4', 'editeur': 'Pocket'}
+{'id': '6', 'titre': 'Les Misérables', 'auteurs': 'Victor Hugo', 'isbn': '978-2-253-09633-4', 'editeur': 'Le Livre de Poche'}
+{'id': '7', 'titre': 'Cent ans de solitude', 'auteurs': 'Gabriel García Márquez', 'isbn': '978-2-02-023853-1', 'editeur': 'Seuil'}
+{'id': '8', 'titre': "L´Alchimiste", 'auteurs': 'Paulo Coelho', 'isbn': '978-2-290-31988-6', 'editeur': 'J´ai lu'}
+{'id': '9', 'titre': 'Orgueil et Préjugés', 'auteurs': 'Jane Austen', 'isbn': '978-2-264-05265-5', 'editeur': '10/18'}
+{'id': '10', 'titre': 'Le Comte de Monte-Cristo', 'auteurs': 'Alexandre Dumas', 'isbn': '978-2-253-09811-6', 'editeur': 'Le Livre de Poche'}

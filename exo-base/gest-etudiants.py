@@ -1,5 +1,6 @@
 label_etudiant = ["nom", "prenom", "age", "cours principal"]
 import os
+from  gestetudiantsactions import *
 
 
 list_etudiant = dict(
@@ -12,21 +13,8 @@ list_etudiant = dict(
 def clear_screen():
     os.system('cls' if os.name == 'nt' else 'clear')
 
-def print_etudiants():
-    print()
-    print("Voici la liste des étudiants")
-    print("----------------------------")
-    for etudiant in list_etudiant:
-        print(f"{etudiant}: {list_etudiant[etudiant]}")
-    print("---")
 
-def print_menu():
-    print("Menu:")
-    print("1. Afficher la liste des étudiants")
-    print("2. Ajouter un étudiant")
-    print("3. Modifier un étudiant")
-    print("4. Supprimer un étudiant")
-    print("5. Quitter")
+
 
 def remove_etudiants():
     print()
@@ -75,13 +63,11 @@ def add_etudiants():
     list_etudiant[new_etudiant] = info_etudiant
 
 
-def pause():
-    input("Appuyez sur ENTREE pour continuer...")
 
+#
+# Main code
+#
 nePasQuitter = True
-
-
-
 
 while nePasQuitter:
     print_menu()
@@ -101,3 +87,4 @@ while nePasQuitter:
     if nePasQuitter:
         pause()
         clear_screen()
+
